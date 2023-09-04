@@ -2,9 +2,11 @@ import java.util.HashMap;
 
 public class Sedan implements Service{
      private  String car ="SEDAN";
-     HashMap<String,String>hmm;
-     public Sedan(HashMap<String,String>hmm){
+    private String name;
+     private HashMap<String,String>hmm;
+     public Sedan(HashMap<String,String>hmm,String name){
           this.hmm =hmm;
+          this.name =name;
      }
     
 
@@ -50,6 +52,7 @@ public class Sedan implements Service{
   public  void generateBill(){
      StringBuilder sb = new StringBuilder();
      System.out.println("<-----------Service Bill-------->");
+     sb.append("\n Customer name  : "+name);
      sb.append("\n car type : "+car);
 
      sb.append("\n Service Code : ");

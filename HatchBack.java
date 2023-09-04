@@ -2,9 +2,11 @@ import java.util.*;
 
 public class HatchBack implements Service{
    private  String car ="HatchBAck";
-     HashMap<String,String>hmm;
-     public HatchBack(HashMap<String,String>hmm){
+    private  HashMap<String,String>hmm;
+    private String name;
+     public HatchBack(HashMap<String,String>hmm,String name){
           this.hmm =hmm;
+          this.name =name;
      }
     
 
@@ -50,6 +52,7 @@ public class HatchBack implements Service{
   public  void generateBill(){
      StringBuilder sb = new StringBuilder();
      System.out.println("<-----------Service Bill-------->");
+     sb.append("\n Customer name  : "+name);
      sb.append("\n car type : "+car);
 
      sb.append("\n Service Code : ");

@@ -2,9 +2,11 @@ import java.util.HashMap;
 
 public class XUV implements Service {
       private  String car ="XUV";
-     HashMap<String,String>hmm;
-     public XUV(HashMap<String,String>hmm){
+      private String name;
+    private HashMap<String,String>hmm;
+     public XUV(HashMap<String,String>hmm,String name){
           this.hmm =hmm;
+          this.name  =name;
      }
     
 
@@ -50,6 +52,8 @@ public class XUV implements Service {
   public  void generateBill(){
      StringBuilder sb = new StringBuilder();
      System.out.println("<-----------Service Bill-------->");
+
+      sb.append("\n Customer name  : "+name);
      sb.append("\n car type : "+car);
 
      sb.append("\n Service Code : ");

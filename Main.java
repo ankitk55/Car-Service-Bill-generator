@@ -5,6 +5,10 @@ public class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
 
+        System.out.println("Please enter customer name : ");
+
+        String name =sc.nextLine();
+
          HashMap<String ,String>hm = new HashMap<>();
         hm.put("basicService","BS01");
          hm.put("engineFixing","EF01");
@@ -26,17 +30,17 @@ public class Main{
                       int p =sc.nextInt();
                        
                       if(p==1){
-                              hatchBack = new HatchBack(hm);
+                              hatchBack = new HatchBack(hm,name);
                               hatchBackFlag =true;
                               break;
                       }
                       else if(p==2){
-                        sedan = new Sedan(hm);
+                        sedan = new Sedan(hm,name);
                           sedanFlag =true;
                           break;
                       }
                       else if(p==3){
-                        xuv  =new XUV(hm);
+                        xuv  =new XUV(hm,name);
                         xuvFlag=true;
                         break;
                       }
